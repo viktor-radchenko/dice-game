@@ -53,7 +53,7 @@ btnRoll.addEventListener("click", () => {
 
   // Display dice img with proper dots
   diceEl.classList.remove("hidden");
-  diceEl.src = `dice-${dice}.png`;
+  diceEl.src = `static/images/dice-${dice}.png`;
 
   // Verify dice != 1
   if (dice !== 1) {
