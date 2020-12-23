@@ -4,9 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dice Game</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="static/css/style.css" />
   </head>
   <body>
-    <script src="main.js"></script>
+    <main>
+      <section class="player player--0 player--active">
+        <h2 class="name" id="name--0">Player 1</h2>
+        <p class="score" id="score--0">43</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--0">0</p>
+        </div>
+      </section>
+      <section class="player player--1">
+        <h2 class="name" id="name--1">Player 2</h2>
+        <p class="score" id="score--1">24</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--1">0</p>
+        </div>
+      </section>
+
+      <img src="static/images/dice-5.png" alt="Playing dice" class="dice" />
+      <button class="btn btn--new">🔄 New game</button>
+      <button class="btn btn--roll">🎲 Roll dice</button>
+      <button class="btn btn--hold">📥 Hold</button>
+      <button class="btn btn--rules">📒 Rules</button>
+    </main>
+
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h1>Dice "Pig" Game - Rules 📒</h1>
+      <p>
+        The main goal of this game is to reach 100 points by rolling dice. Players take turns rolling dice and sum the
+        result. In case the number on dice is 1, player looses all unsaved points and passes the turn to another player.
+        To save your points, click 'Hold' button, and all current points will be added to your score. Enjoy!
+      </p>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <script src="static/js/main.js"></script>
   </body>
 </html>
