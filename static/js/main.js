@@ -67,11 +67,14 @@ btnRoll.addEventListener("click", () => {
 
 btnHold.addEventListener("click", () => {
   if (!gamePlaying) return;
+
   // 1. Add current score to list;
   scores[activePlayer] += currentScore;
   document.getElementById(`score--${activePlayer}`).textContent = scores[activePlayer];
+
   // 2. Check if score >= 100;
-  if (scores[activePlayer] >= 20) {
+  if (scores[activePlayer] >= 100) {
+    // Finish the game
     gamePlaying = false;
     document.querySelector(`.player--${activePlayer}`).classList.add("player--winner");
     document.querySelector(`.player--${activePlayer}`).classList.remove("player--active");
